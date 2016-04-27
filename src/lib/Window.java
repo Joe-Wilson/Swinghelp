@@ -9,5 +9,9 @@ public class Window extends JFrame {
 		this.setSize(width, height);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
+		this.addMouseListener(reader);
+		this.addMouseMotionListener(reader);
+		this.addMouseWheelListener(reader);
+		this.addKeyListener(reader);
 	}
 }
