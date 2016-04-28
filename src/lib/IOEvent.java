@@ -5,6 +5,7 @@ import java.awt.event.MouseWheelEvent;
 public class IOEvent {
 	private String type;
 	private int x, y;
+	private int button;
 	private char key;
 	private MouseWheelEvent wheelEvent;
 
@@ -12,6 +13,13 @@ public class IOEvent {
 		this.type = type;
 		this.x = x;
 		this.y = y;
+	}
+
+	public IOEvent(String type, int x, int y, int button) {
+		this.type = type;
+		this.x = x;
+		this.y = y;
+		this.button = button;
 	}
 
 	public IOEvent(String type, char key) {
@@ -43,4 +51,9 @@ public class IOEvent {
 	public MouseWheelEvent getwheelEvent() {
 		return wheelEvent;
 	}
+
+	public int getButton() {
+		return button;
+	}
+
 }
